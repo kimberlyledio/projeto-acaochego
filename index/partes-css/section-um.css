@@ -1,17 +1,16 @@
 /* ==============================
-    CONFIGURAÇÕES GERAIS
+   CONFIGURAÇÕES GERAIS
 ================================= */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat-Regular";
 }
 
 /* ==============================
-    TOPO E LOGO
+   TOPO E LOGO
 ================================= */
 .top-bar {
     background: #fff;
-    /* Fundo branco */
     width: 100%;
     position: relative;
 }
@@ -21,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Espaça logo, nome/slogan e ícones */
 }
 
 .logo {
@@ -29,37 +29,38 @@ body {
 }
 
 /* ==============================
-    NOME E SLOGAN (Centro)
+   NOME E SLOGAN (Centro)
 ================================= */
 .name-slogan {
     text-align: center;
-    color: #4f8fa7;
-    /* Cor azul-clara para o nome/slogan */
+    color: #5893F3;
 }
 
 .name-slogan .name {
     font-family: "vaseline-extra";
+    /* Fonte personalizada */
     font-size: 55px;
     margin: 5px auto;
 }
 
 .name-slogan .slogan {
+    font-family: "Montserrat-bold";
     font-size: 18px;
+    margin-top: 0;
 }
 
 /* ==============================
-    COLUNA DA DIREITA (Social + Hambúrguer)
+   COLUNA DIREITA (Social + Hambúrguer)
 ================================= */
 .right-column-stack {
     display: flex;
     flex-direction: column;
-    /* Empilha os elementos verticalmente */
+    /* Ícones em coluna */
     align-items: center;
     gap: 20px;
-    /* Espaço entre a linha social e o botão hambúrguer */
 }
 
-/* 1. Estilo dos Ícones Sociais (Linha de Cima) */
+/* ÍCONES SOCIAIS */
 .social {
     font-size: 30px;
     display: flex;
@@ -67,7 +68,7 @@ body {
 }
 
 .social a i {
-    color: rgb(0, 119, 255);
+    color: black;
     transition: 0.2s ease;
 }
 
@@ -75,63 +76,56 @@ body {
     opacity: 0.8;
 }
 
-/* 2. Estilo do botão de toggle (Linha de Baixo) */
+/* BOTÃO HAMBÚRGUER */
 .menu-toggle {
     display: block;
     background: none;
     border: none;
     font-size: 30px;
-    color: #00bbff;
-    /* Cor azul-clara/água para o ícone de hambúrguer */
+    color: #5893F3;
     cursor: pointer;
     padding: 0;
 }
 
 .menu-toggle i {
-    /* transição suave para a rotação */
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
-/* Aplica a rotação ao ícone quando o botão tem a classe 'show' */
+/* Rotaciona o ícone quando ativo */
 .menu-toggle.show i {
     transform: rotate(90deg);
 }
 
 /* ==============================
-    MENU DE HAMBÚRGUER (Lista Suspensa)
+   MENU DE HAMBÚRGUER
 ================================= */
 .menu {
-    /* Posiciona o menu suspenso em relação ao topo da página */
     position: absolute;
     top: 0;
     right: 0;
     z-index: 90;
+    /* Mantém sobreposto ao conteúdo */
 }
 
-/* Estilo da lista (oculta por padrão) */
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
-
-    /* Posicionamento e aparência do menu suspenso */
     position: absolute;
     right: 10px;
     top: 140px;
-    background-color: #4f8fa7;
+    background-color: #5893F3;
     width: 200px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     z-index: 100;
-
-    /* Efeitos de Transição e Ocultação */
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: 0.3s ease, 0.3s ease;
 }
 
-/* Mostrar o menu quando a classe 'show' é ativada pelo JS */
+/* Mostra o menu quando ativado via JS */
 .menu ul.show {
     opacity: 1;
     visibility: visible;
@@ -155,15 +149,130 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Remove borda do último item */
 .menu ul li:last-child {
     border-bottom: none;
 }
 
 /* ==============================
-    LINHA DIVISÓRIA
+   LINHA DIVISÓRIA
 ================================= */
+
 .line {
-    border-bottom: 7px solid rgb(0, 119, 255);
+    border-bottom: 7px solid #5893F3;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Efeito de profundidade */
+}
+
+/* ==============================
+   CONTEÚDO DO SITE
+================================= */
+.imagem-banner {
+    width: 100%;
+    max-height: 550px;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.imagem-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Corta imagem sem distorcer */
+    object-position: center;
+    transform: translateY(-30%);
+    /* Ajusta a posição vertical */
+}
+
+/* ==============================
+   CARTÕES DE ADOÇÃO
+================================= */
+.cartao {
+    height: 350px;
+    background-color: #5893f3;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex: 1 1 300px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    /* Permite alinhar botão no fim */
+    justify-content: flex-start;
+}
+
+/* Agrupa ícone, título e texto */
+.conteudo-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartao h3 {
+    font-family: "Montserrat-bold";
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.cartao i {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cartao p {
+    
+    font-size: 16.5px;
+    margin-bottom: 0;
+}
+
+/* Botão "Saiba mais" fixado na base do cartão */
+.botao-saiba-mais {
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    /* Empurra para o final */
+    align-self: center;
+}
+
+.botao-saiba-mais:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==============================
+   POSICIONAMENTO DOS CARTÕES
+================================= */
+.banner-acoes-agrupadas {
+    position: relative;
+    width: 100%;
+    margin-bottom: 150px;
+    /* Evita sobreposição com o próximo conteúdo */
+}
+
+/* Container que centraliza os cartões com gap */
+.acoes-container {
+    position: absolute;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    max-width: 1300px;
+    z-index: 10;
+    padding: 0 20px;
 }

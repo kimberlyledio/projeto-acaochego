@@ -2,3 +2,15 @@
     font-family: "vaseline-extra";
     src: url(/Fonts/Vaseline\ Extra.ttf);
 }
+
+@font-face {
+    font-family: "Montserrat-regular";
+    src: url(/Fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url(/Fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+/* Existem muitas fontes nas pastas, precisamos escolher qual usar e otimizar essa quantidade */ 
