@@ -392,6 +392,80 @@ body {
     flex-basis: 30%;
 }
 
+/* ==============================
+    EMPRESAS PARCEIRAS
+================================= */
+
+.txt-patrocinios div {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.txt-patrocinios h3 {
+    font-family: "Montserrat-bold";
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.line-patrocinio {
+    border-bottom: 2px solid #00000083;
+}
+
+.resp-social p {
+    font-size: 22px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.slogan-empresas p {
+    font-size: 22px;
+
+    text-align: center;
+
+}
+
+/* ==============================
+    LOGOS INFINITO
+================================= */
+
+.logos-infinito {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #FFFFFF;
+    padding: 70px 0;
+    display: flex;
+
+}
+
+.logos-slide {
+    display: flex;
+    animation: slide 15s linear infinite;
+}
+
+.logos-slide img {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 40px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* ============================== 
+    BOTAO DAS EMPRESAS 
+================================= */
+
 /* ============================== 
     FOOTER 
 ================================= */
