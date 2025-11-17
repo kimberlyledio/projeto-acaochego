@@ -1,395 +1,377 @@
 body {
-    margin: 0;
-    font-family: "Montserrat-Regular";
+  margin: 0;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
 }
 
 /* ==============================
     TOPO E LOGO
 ================================= */
 .top-bar {
-    background: #fff;
-    width: 100%;
-    position: relative;
+  background: #fff;
+  width: 100%;
+  position: relative;
 }
 
-/* Container principal do topo (alinhamento) */
 .container {
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* Espaça logo, nome/slogan e ícones */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    max-height: 150px;
-    margin-left: 20px;
+  max-height: 150px;
+  margin-left: 20px;
 }
 
 /* ==============================
     NOME E SLOGAN
 ================================= */
 .name-slogan {
-    text-align: center;
-    color: #5893F3;
+  text-align: center;
+  color: #5893f3;
 }
 
 .name-slogan .name {
-    font-family: "vaseline-extra";
-    /* Fonte personalizada */
-    font-size: 55px;
-    margin: 5px auto;
+  font-family: "vaseline-extra";
+  /* Fonte personalizada */
+  font-size: 55px;
+  margin: 5px auto;
 }
 
 .name-slogan .slogan {
-    font-family: "Montserrat-bold";
-    font-size: 18px;
-    margin-top: 0;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 18px;
+  margin-top: 0;
 }
 
 /* ==============================
     COLUNA DIREITA (Social + Hambúrguer)
 ================================= */
 .right-column-stack {
-    display: flex;
-    flex-direction: column;
-    /* Ícones em coluna */
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Ícones em coluna */
+  align-items: center;
+  gap: 20px;
 }
 
 /* ÍCONES SOCIAIS */
 .social {
-    font-size: 30px;
-    display: flex;
-    gap: 10px;
+  font-size: 30px;
+  display: flex;
+  gap: 10px;
 }
 
 .social a i {
-    color: black;
-    transition: 0.2s ease;
+  color: black;
+  transition: 0.2s ease;
 }
 
 .social a:hover i {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* BOTÃO HAMBÚRGUER */
 .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #5893F3;
-    cursor: pointer;
-    padding: 0;
+  display: block;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #5893f3;
+  cursor: pointer;
+  padding: 0;
 }
 
 .menu-toggle i {
-    transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 /* Rotaciona o ícone quando ativo */
 .menu-toggle.show i {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 /* ==============================
     MENU DE HAMBÚRGUER
 ================================= */
 .menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 90;
-    /* Mantém sobreposto ao conteúdo */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 90;
 }
 
 .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    right: 10px;
-    top: 140px;
-    background-color: #5893F3;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
-    z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease, 0.3s ease;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 10px;
+  top: 140px;
+  background-color: #5893f3;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Mostra o menu quando ativado via JS */
 .menu ul.show {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu ul li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .menu ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    transition: 0.3s;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 .menu ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .menu ul li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* ==============================
     LINHA DIVISÓRIA
 ================================= */
 .line {
-    border-bottom: 7px solid #5893F3;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-bottom: 7px solid #5893f3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* ==============================
     BANNER PRINCIPAL
 ================================= */
 .imagem-banner {
-    width: 100%;
-    max-height: 550px;
-    overflow: hidden;
-    display: block;
-    padding: 0;
-    margin: 0;
-    position: relative;
+  width: 100%;
+  max-height: 550px;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
 
 .imagem-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    /* Corta imagem sem distorcer */
-    object-position: center;
-    transform: translateY(-30%);
-    /* Ajusta a posição vertical */
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: translateY(-30%);
 }
 
 /* ==============================
     CARTÕES DE ADOÇÃO
 ================================= */
 .cartao {
-    height: 350px;
-    background-color: #5893f3;
-    color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    flex: 1 1 300px;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  cursor: default;
+  height: 340px;
+  background-color: #5893f3ea;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  flex: 1 1 300px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
 }
-
-
+.cartao:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
 .conteudo-superior {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cartao h3 {
-    font-family: "Montserrat-bold";
-    font-size: 1.5rem;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .cartao i {
-    font-size: 50px;
-    color: white;
-    margin-bottom: 10px;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .cartao p {
-    font-size: 16.5px;
-    margin-bottom: 0;
+  font-weight: bold;
+  font-size: 14.5px;
+  margin-bottom: 0;
 }
 
-/* Botão "Saiba mais" fixado na base do cartão */
 .botao-saiba-mais {
-    color: white;
-    border: 2px solid white;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    margin-top: auto;
-    align-self: center;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-top: auto;
+  align-self: center;
 }
 
 .botao-saiba-mais:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ==============================
     POSICIONAMENTO DOS CARTÕES
 ================================= */
 .banner-acoes-agrupadas {
-    position: relative;
-    width: 100%;
-    margin-bottom: 150px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 150px;
 }
 
 .acoes-container {
-    position: absolute;
-    bottom: -350px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    width: 100%;
-    max-width: 1300px;
-    z-index: 10;
-    padding: 0 20px;
+  position: absolute;
+  bottom: -350px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  max-width: 1300px;
+  z-index: 10;
+  padding: 0 20px;
 }
 
 /* ==============================
     LINHA DE CÃES (Primeira)
 ================================= */
 .line-dog {
-    background-image: url(../img/line-dog-1.png);
-    opacity: 0.3;
-    max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center center;
-    margin-top: 450px;
-    margin-bottom: 70px;
-    height: 100px;
-    width: 100%;
+  background-image: url(../img/line-dog-1.png);
+  opacity: 0.3;
+  max-width: 1780px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center center;
+  margin-top: 450px;
+  margin-bottom: 70px;
+  height: 80px;
+  width: 100%;
 }
 
 /* ==============================
     TEXTOS DE CONTEÚDO
 ================================= */
 .container-textos {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1150px;
-    padding-bottom: 50px;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1150px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .container-textos h1 {
-    letter-spacing: 2px;
-    color: #5893f3;
-    font-size: 50px;
-    font-family: "vaseline-extra";
-    padding-bottom: 30px;
+  letter-spacing: 2px;
+  color: #5893f3;
+  font-size: 50px;
+  font-family: "vaseline-extra";
+  padding-bottom: -10px;
 }
 
 .container-textos p {
-    font-size: 1.3rem;
-    gap: 300px;
-    margin-bottom: 70px;
-}
-
-/* ==============================
-    LINHA DE CÃES (Segunda)
-================================= */
-.line-dog-2 {
-    background-image: url(../img/line-dog-2.png);
-    opacity: 0.3;
-    max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center center;
-    margin-top: -30px;
-    margin-bottom: 30px;
-    height: 100px;
-    width: 100%;
+  font-size: 18px;
+  margin-bottom: 60px;
 }
 
 /* ==============================
     NOSSOS NÚMEROS
 ================================= */
 .img-nossos-numeros {
-    background-image: url('../img/banner-numeros.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
-    color: white;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 80px;
+  background-image: url("../img/banner-numeros.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .img-nossos-numeros div {
-    max-width: 950px;
-    margin: 0 auto;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .img-nossos-numeros h3 {
-    font-family: "Montserrat-bold";
-    font-size: 2.5em;
-    margin-bottom: 30px;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 .slogan-numeros {
-    font-size: 1.1em;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
 }
 
 .dados-numeros {
-    font-family: "Montserrat-bold";
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 20px;
-    gap: 150px;
+  font-family: "Montserrat-bold", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  gap: 150px;
 }
 
 .dados-numeros p {
-    font-family: "Montserrat-bold";
-    font-size: 3.5em;
-    flex-basis: 30%;
-    margin: 10px;
-    padding: 0;
-    line-height: 1;
-    gap: 50px;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 3.5rem;
+  flex-basis: 30%;
+  margin: 10px;
+  padding: 0;
+  line-height: 1;
+  gap: 50px;
 }
 
 .dados-info {
-    display: flex;
-    justify-content: space-around;
-    gap: 150px;
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
 }
 
 .dados-info p {
-    margin: auto;
-    flex-basis: 30%;
+  font-size: 16px;
+  margin: auto;
+  flex-basis: 30%;
 }
 
 /* ==============================
@@ -397,34 +379,27 @@ body {
 ================================= */
 
 .txt-patrocinios div {
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-top: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .txt-patrocinios h3 {
-    font-family: "Montserrat-bold";
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    text-align: center;
+  color: #636363;
+  font-weight: bold;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .line-patrocinio {
-    border-bottom: 2px solid #00000083;
-}
-
-.resp-social p {
-    font-size: 22px;
-    margin-top: 50px;
-    text-align: center;
-
+  border-bottom: 2px solid #00000063;
 }
 
 .slogan-empresas p {
-    font-size: 22px;
-
-    text-align: center;
-
+  font-size: 18px;
+  text-align: center;
 }
 
 /* ==============================
@@ -432,80 +407,124 @@ body {
 ================================= */
 
 .logos-infinito {
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: #FFFFFF;
-    padding: 70px 0;
-    display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+  padding: 70px 0;
+  display: flex;
 
+  /* Cria um gradiente transparente nas bordas esquerda e direita. */
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 3) 10%,
+    rgba(0, 0, 0, 3) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* Para maior compatibilidade */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 3) 10%,
+    rgba(0, 0, 0, 3) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .logos-slide {
-    display: flex;
-    animation: slide 15s linear infinite;
+  display: flex;
+  animation: slide 15s linear infinite;
 }
 
 .logos-slide img {
-    width: 200px;
-    height: 100px;
-    object-fit: contain;
-    margin: 0 40px;
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 40px;
 }
 
 @keyframes slide {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(-100%);
-    }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* ============================== 
     BOTAO DAS EMPRESAS 
 ================================= */
 
+.btn-empresas {
+  text-align: center;
+  width: 100%;
+}
+
+.botao-empresas {
+  cursor: pointer;
+  background-color: #5893f3;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-top: -2px;
+  margin-bottom: 30px;
+}
+
+.botao-empresas:hover {
+  background-color: #636363;
+}
+
 /* ============================== 
     FOOTER 
 ================================= */
 footer {
-    background-color: #5893f3;
-    padding: 20px 0;
-    color: #fff;
+  background-color: #5893f3;
+  padding: 20px 0;
+  color: #fff;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 200px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .footer-column h3 {
-    margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
-    margin-bottom: 8px;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 
 .sociais-footer a {
-    margin-right: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
